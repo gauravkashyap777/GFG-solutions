@@ -29,7 +29,7 @@ Output:
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T13:33:26.047Z  
+**Submitted:** 2026-10-19T13:13:04.042Z  
 
 ```java
 import java.util.Scanner;
