@@ -25,37 +25,22 @@ Explanation: Since any permutation won't give the answer.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T16:24:16.784Z  
+**Submitted:** 2026-10-21T17:06:20.398Z  
 
 ```java
 class Solution {
     public boolean isPossible(int k, int[] a, int[] b) {
         // code here
         
-    //     for(int i=0;i<a.length;i++){
-    //         //for(int j=0;j<b.length;j++){
-    //             if(a[i]+b[i] >= k){
-    //                 return true;
-    //             }
-    //         }
-    //   // }
-    //     return false;
-    
-    
-              Arrays.sort(a);
-              Arrays.sort(b);
-              
-            //  for(int i=b.length-1;i>=0;i--){
-            //      System.out.println(b[i]);
-            //  }
-           
-           for(int i=0;i<a.length;i++){
-               if(a[i]+b[b.length-1-i] <k){
-                   return false;
-               }
-           }
-           
-           return true;
+        Arrays.sort(a);
+        Arrays.sort(b);
+        
+        for(int i=0;i<a.length;i++){
+            if(a[i]+b[b.length-1-i]<k){
+                return false;
+            }
+        }
+        return true;
     }
 }
 ```
