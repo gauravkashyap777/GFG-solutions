@@ -25,22 +25,22 @@ Explanation: There is no pair with absolute difference of 45.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-22T16:49:12.790Z  
+**Submitted:** 2026-10-22T19:35:36.738Z  
 
 ```java
 class Solution {
     public boolean findPair(int[] arr, int x) {
         // code here
          Arrays.sort(arr);
-      
-        
+
+
         int i=0;
         int j = 1;
         while(j<arr.length){
             int diffn = arr[j]-arr[i];
             if(diffn == x){
                 return true;
-              
+
             }else if(diffn > x){
                 i++;
             }else{
