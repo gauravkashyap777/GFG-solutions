@@ -35,30 +35,23 @@ Explanation: Smallest number greater than 0 is 1, whose indices are 0 and 1. The
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-22T16:04:47.977Z  
+**Submitted:** 2026-10-22T16:06:55.102Z  
 
 ```java
 class Solution {
     public int findCeil(int[] arr, int x) {
         // code here
         
-        // int max=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i] >= x){
-              return  i;
-               // break;
+        int n = arr.length;
+        
+        for(int i=0;i<n;i++){
+            if(arr[i]>=x){
+                return i;
             }
         }
         return -1;
     }
 }
-
-
-
-// given a sorted array arr i.e contains duplicate element  and also given x
-// find first greater element or equal to element
-// if no then return -1
-
 
 ```
 
