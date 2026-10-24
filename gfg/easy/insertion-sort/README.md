@@ -31,14 +31,25 @@ Explanation: The sorted array will be [1, 4, 9].
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T08:38:59.637Z  
+**Submitted:** 2026-10-24T08:45:55.670Z  
 
 ```java
 class Solution {
     // Please change the array in-place
     public void insertionSort(int arr[]) {
         // code here
-        Arrays.sort(arr);
+      //  Arrays.sort(arr);
+      
+      for(int i =0;i<arr.length;i++){
+          int j =i;
+          
+          while(j>0 && arr[j]<arr[j-1]){
+              int temp = arr[j];
+              arr[j] = arr[j-1];
+              arr[j-1] = temp;
+              j--;
+          }
+      }
     }
 }
 ```
