@@ -35,7 +35,7 @@ Explanation: Smallest positive missing number is 1.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T18:11:40.637Z  
+**Submitted:** 2026-10-24T18:32:24.403Z  
 
 ```java
 class Solution {
@@ -43,8 +43,8 @@ class Solution {
         // code here
         
         Arrays.sort(arr);
-        int missing = 1;
         
+        int missing =1;
         for(int i=0;i<arr.length;i++){
             if(arr[i] == missing){
                 missing++;
