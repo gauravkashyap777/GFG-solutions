@@ -8,7 +8,8 @@ class Solution {
 
         for(int i=0;i<n;i++){
             if(nums[i] == nums[i+1]){
-                ans.add(i+1);
+                //ans.add(i);
+                ans.add(nums[i]);
             }
         }
         return ans;
