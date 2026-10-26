@@ -46,9 +46,9 @@ Output: []
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 41.6 MB  
-**Submitted:** 2026-10-25T18:18:18.973Z  
+**Runtime:** 28 ms (beats 16.61%)  
+**Memory:** 64.4 MB (beats 43.22%)  
+**Submitted:** 2026-10-26T18:39:53.507Z  
 
 ```java
 class Solution {
@@ -61,7 +61,8 @@ class Solution {
 
         for(int i=0;i<n;i++){
             if(nums[i] == nums[i+1]){
-                ans.add(i+1);
+                //ans.add(i);
+                ans.add(nums[i]);
             }
         }
         return ans;
