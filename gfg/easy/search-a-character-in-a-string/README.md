@@ -26,17 +26,16 @@ Explanation: The character 'z' is not present in "geeksforgeeks".
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T09:01:17.853Z  
+**Submitted:** 2026-10-28T09:03:01.304Z  
 
 ```java
 class Solution {
     // Function to search for a character in the string
     public int searchCharacter(String s, char ch) {
         // code here
-        int ans =0;
+        
         for(int i=0;i<s.length();i++){
             if(s.charAt(i) == ch){
-                ans = s.charAt(i);
                 return i;
             }
         }
