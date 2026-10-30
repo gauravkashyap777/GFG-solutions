@@ -44,28 +44,43 @@ All elements are distinct.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-10-30T07:28:09.682Z  
+**Runtime:** 25 ms (beats 18.62%)  
+**Memory:** 81.1 MB (beats 97.26%)  
+**Submitted:** 2026-10-30T16:54:42.240Z  
 
 ```java
 class Solution {
     public boolean containsDuplicate(int[] nums) {
 
-       int n = nums.length;
-         
-        int i=0;
-        int j = n-1;
 
-        while(i<=j){
 
-            if(nums[i] != nums[j]){
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
+    //    int n = nums.length;
+    //    int count=0;
+    //     int min =0;
+    //    for(int i=0;i<n;i++){
+    //     for(int j=i+1;j<n;j++){
+    //         if(nums[i] == nums[j]){
+    //             count++;
+
+    //             if(count>min){
+    //                 return true;
+    //             }
+    //         }
+    //     }
+    //    }
+     
+    //     return false;
+
+
+              Arrays.sort(nums);
+
+              for(int i=0;i<nums.length-1;i++){
+                if(nums[i] == nums[i+1]){
+                    return true;
+                }
+              }
+           
+           return false;
     }
 }
 ```
