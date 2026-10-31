@@ -25,7 +25,7 @@ Explanation: Each lowercase character in the string is converted to uppercase.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-31T10:48:37.704Z  
+**Submitted:** 2026-10-31T11:00:56.400Z  
 
 ```java
 class Solution {
@@ -38,7 +38,19 @@ class Solution {
     //   }
     //   return ans;
     
-          return s.toUpperCase();
+          //return s.toUpperCase();
+          
+          
+          StringBuilder sb = new StringBuilder();
+          
+          for(int i=0;i<s.length();i++){
+              char ch = s.charAt(i);
+              
+              char c = (char)('A'+ch-'a');
+              sb.append(c);
+          }
+          
+          return sb.toString();
     }
 }
 ```
