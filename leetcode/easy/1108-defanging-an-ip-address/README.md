@@ -36,26 +36,13 @@ Output: "255[.]100[.]50[.]0"
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42 MB (beats 97.05%)  
-**Submitted:** 2026-11-03T09:38:05.915Z  
+**Memory:** 42.2 MB (beats 89.94%)  
+**Submitted:** 2026-11-03T09:27:41.350Z  
 
 ```java
 class Solution {
     public String defangIPaddr(String address) {
-         //return address.replace(".","[.]");
-
-         StringBuilder sb = new StringBuilder();
-         
-         for(int i=0;i<address.length();i++){
-           char ch =  address.charAt(i);
-
-           if(ch == '.'){
-               sb.append("[.]");
-           }else{
-            sb.append(ch);
-           }
-         }
-         return sb.toString();
+         return address.replace(".","[.]");
     }
 }
 ```
