@@ -41,38 +41,35 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 41.1 MB  
-**Submitted:** 2026-11-11T10:27:30.194Z  
+**Runtime:** 17 ms (beats 7.96%)  
+**Memory:** 42.7 MB (beats 96.85%)  
+**Submitted:** 2026-11-11T10:53:49.959Z  
 
 ```java
+
 class Solution {
     public int hIndex(int[] citations) {
-        Arrays.sort(citations);
         int n = citations.length;
-        int count=0;
-        int count1=0;
-       // int hindex =0;
+        int max = 0;
 
-        for(int i=0;i<n;i++){
-       
-            if(citations[i] >= 3){
-                count++;
-             //hindex = citations[i];
-            }
-           
-         }
-         for(int i=0;i<n;i++){
-            if(citations[i] >= 1){
-                count1++;
-            }
-         }
-        //return count,count1;
-       // return count1;
+        for (int h = 0; h <= n; h++) {
+            int count = 0;
 
-       return  count;
+            for (int i = 0; i < n; i++) {
+                if (citations[i] >= h) {
+                    count++;
+                }
+            }
+
+            if (count >= h) {
+                max = h;
+            }
+        }
+
+        return max;
     }
 }
+
 ```
 
 ---
