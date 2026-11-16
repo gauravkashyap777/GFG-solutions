@@ -14,6 +14,8 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -52,13 +54,13 @@ Output: -1
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.3 MB (beats 96.73%)  
-**Submitted:** 2026-10-21T17:17:42.111Z  
+**Memory:** 43.4 MB (beats 75.36%)  
+**Submitted:** 2026-11-16T17:55:01.287Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) {
-        int index=0;
+        //int index=0;
         for(int i=0;i<nums.length;i++){
             if(nums[i] == target){
                  return i;
