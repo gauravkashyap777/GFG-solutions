@@ -43,8 +43,8 @@ Explanation: 2 does not exist in nums so return -1
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-11-17T08:26:27.813Z  
+**Memory:** 41.2 MB  
+**Submitted:** 2026-11-17T08:26:43.917Z  
 
 ```java
 class Solution {
