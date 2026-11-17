@@ -42,24 +42,35 @@ Explanation: 2 does not exist in nums so return -1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.2 MB  
-**Submitted:** 2026-11-17T08:26:43.917Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 47.9 MB (beats 77.23%)  
+**Submitted:** 2026-11-17T08:33:52.275Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) {
         
-       // Arrays.sort(nums);
-      int n = nums.length;
+   
+         int st =0;
+         int end = nums.length-1;
 
 
-        for(int i=0;i<n;i++){
-            if(nums[i] == target){
-                return i;
+         while(st<=end){
+            int mid = st +(end-st)/2;
+ 
+
+            if(nums[mid] == target){
+                return mid;
+            }  
+            else if(nums[mid] < target){
+                st = mid+1;
+            }else{
+                end = mid-1;
             }
-        }
-        return -1;
+         }
+          
+          return -1;
+
     }
 }
 ```
