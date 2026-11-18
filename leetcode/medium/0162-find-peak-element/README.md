@@ -44,29 +44,53 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.6 MB (beats 79.92%)  
-**Submitted:** 2026-11-18T09:42:02.707Z  
+**Memory:** 44.2 MB (beats 32.88%)  
+**Submitted:** 2026-11-18T10:01:44.203Z  
 
 ```java
 class Solution {
     public int findPeakElement(int[] nums) {
      
-        int st =0;
-        int end = nums.length-1;
+        // int st =0;
+        // int end = nums.length-1;
 
-        while(st<end){
-            int mid = st+(end-st)/2;
+        // while(st<end){
+        //     int mid = st+(end-st)/2;
 
-            if(nums[mid] < nums[mid+1]){
-                st = mid+1;
+        //     if(nums[mid] < nums[mid+1]){
+        //         st = mid+1;
 
-            }else{
-                end = mid;
+        //     }else{
+        //         end = mid;
+        //     }
+        // }
+        // return st;
+
+
+
+            int l=0;
+            int r= nums.length-1;
+
+            while(l<=r){
+
+                int mid = l+(r-l)/2;
+
+                if((mid-1 < 0 || nums[mid] > nums[mid-1]) && (mid+1 >= nums.length || nums[mid] > nums[mid+1])){
+                    return mid;
+                }else if(mid-1 >=0 && nums[mid-1] > nums[mid]){
+                    r = mid-1;
+                }else{
+                    l = mid+1;
+                }
             }
-        }
-        return st;
+
+
+           return -1;
+
     }
 }
+
+
 ```
 
 ---
