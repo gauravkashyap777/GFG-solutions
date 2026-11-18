@@ -43,47 +43,47 @@ Java
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 79.9 MB (beats 71.19%)  
-**Submitted:** 2026-11-18T09:42:19.423Z  
+**Runtime:** 0 ms  
+**Memory:** 42 MB  
+**Submitted:** 2026-11-18T09:42:43.965Z  
 
 ```java
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
 
-        // int st =0;
-        // int end = arr.length-1;
+        int st =0;
+        int end = arr.length-1;
 
-        // while(st<=end){
-        //     int mid = st+(end-st)/2;
+        while(st<end){
+            int mid = st+(end-st)/2;
 
-        //     if(arr[mid] < arr[mid+1]){
-        //         st = mid+1;
+            if(arr[mid] < arr[mid+1]){
+                st = mid+1;
 
-        //     }else{
-        //         end = mid;
-        //     }
-        // }
-        // return st;
-
-        int st = 0;
-        int end = arr.length - 1;
-
-        while (st <= end) {
-            int mid = st + (end - st) / 2;
-
-            if (mid - 1 >= 0 && arr[mid] > arr[mid - 1] &&
-                    mid + 1 < arr.length && arr[mid] > arr[mid + 1]) {
-                return mid;
-
-            } else if (mid - 1 >= 0 && arr[mid - 1] > arr[mid]) {
-                end = mid - 1;
-
-            } else {
-                st = mid + 1;
+            }else{
+                end = mid;
             }
         }
-        return -1;
+        return st;
+
+        // int st = 0;
+        // int end = arr.length - 1;
+
+        // while (st <= end) {
+        //     int mid = st + (end - st) / 2;
+
+        //     if (mid - 1 >= 0 && arr[mid] > arr[mid - 1] &&
+        //             mid + 1 < arr.length && arr[mid] > arr[mid + 1]) {
+        //         return mid;
+
+        //     } else if (mid - 1 >= 0 && arr[mid - 1] > arr[mid]) {
+        //         end = mid - 1;
+
+        //     } else {
+        //         st = mid + 1;
+        //     }
+        // }
+        // return -1;
     }
 }
 ```
