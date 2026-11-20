@@ -51,36 +51,37 @@ Output: -5
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-11-20T13:44:21.239Z  
+**Runtime:** 16 ms (beats 53.24%)  
+**Memory:** 50.8 MB (beats 64.59%)  
+**Submitted:** 2026-11-20T13:58:37.888Z  
 
 ```java
 class Solution {
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
         int m = matrix[0].length;
+
+        int[] arr = new int[n*m];
            int count =0;
-           int ans =0;
+           //int ans =0;
         for(int i=0;i<n;i++){
-            Arrays.sort(matrix[i]);
-        }
             for(int j=0;j<m;j++){
-                Arrays.sort(matrix[j]);
-
+                arr[count++] = matrix[i][j];
             }
-             
-             for(int i=0;i<n;i++){
-                for(int j=0;j<m;j++){
-                    count++;
+        }
+         Arrays.sort(arr);
+               count =0;
+               for(int i=0;i<arr.length;i++){
+                count++;
+                   if(count == k){
+                    return arr[i];
+                   }
+               }
+               
+            
+        
+             return -1;
 
-                    if(count == k){
-                        ans = matrix[i][j];
-                    }
-                }
-             }
-
-             return ans;
     }
 }
 
