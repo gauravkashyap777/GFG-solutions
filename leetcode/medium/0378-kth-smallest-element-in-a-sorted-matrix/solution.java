@@ -2,27 +2,28 @@ class Solution {
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
         int m = matrix[0].length;
+
+        int[] arr = new int[n*m];
            int count =0;
-           int ans =0;
+           //int ans =0;
         for(int i=0;i<n;i++){
-            Arrays.sort(matrix[i]);
-        }
             for(int j=0;j<m;j++){
-                Arrays.sort(matrix[j]);
-
+                arr[count++] = matrix[i][j];
             }
-             
-             for(int i=0;i<n;i++){
-                for(int j=0;j<m;j++){
-                    count++;
+        }
+         Arrays.sort(arr);
+               count =0;
+               for(int i=0;i<arr.length;i++){
+                count++;
+                   if(count == k){
+                    return arr[i];
+                   }
+               }
+               
+            
+        
+             return -1;
 
-                    if(count == k){
-                        ans = matrix[i][j];
-                    }
-                }
-             }
-
-             return ans;
     }
 }
 
